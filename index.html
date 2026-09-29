@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myhub · 포트폴리오 & 채널</title>
+  <meta name="description" content="작업물과 채널을 한곳에서 모아봅니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <!-- Hanging Incandescent Lamp (상단 매달린 백열등) -->
+  <div class="lamp-container" id="lamp-container" aria-label="반응형 백열등">
+    <div class="lamp-assembly is-lit" id="lamp-assembly">
+      <div class="lamp-wire"></div>
+      <div class="lamp-socket"></div>
+      <div class="lamp-bulb" id="lamp-bulb" role="button" tabindex="0" aria-label="백열등 (클릭하여 켜기/끄기)" title="클릭하여 조명 켜기/끄기">
+        <svg class="bulb-svg" viewBox="0 0 36 44" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Glass Bulb Body (Round Circle Globe - Pure White) -->
+          <circle class="bulb-glass" cx="18" cy="26" r="16" stroke="#4a4a4f" stroke-width="1.8"/>
+          <!-- Filament Mount Supports -->
+          <line x1="15" y1="10" x2="15" y2="22" stroke="#88888e" stroke-width="0.9"/>
+          <line x1="21" y1="10" x2="21" y2="22" stroke="#88888e" stroke-width="0.9"/>
+          <!-- Coiled Filament (Tungsten wire) -->
+          <path class="bulb-filament" d="M15 22 Q16.5 26.5 18 22 Q19.5 26.5 21 22" fill="none" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- Glass Glare Highlight -->
+          <path class="bulb-highlight" d="M8 23 A 12 12 0 0 1 18 14" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- Socket Screw Base (Dark Gray) -->
+          <rect x="14" y="0" width="8" height="3" rx="1" fill="#444448"/>
+          <rect x="13" y="3" width="10" height="3.5" rx="1" fill="#58585e"/>
+          <rect x="14" y="6.5" width="8" height="4" rx="1" fill="#444448"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <!-- Identity Header (Dovemayo style) -->
+    <header class="identity">
+      <h1>myhub<span class="period" aria-hidden="true">.</span></h1>
+      <p id="site-sub">ai활용 포토폴리오& 자기소개서</p>
+    </header>
+
+    <!-- Main Cards Grid (3x3) -->
+    <nav class="cards" id="main-cards" aria-label="주요 프로젝트 및 채널">
+      <!-- Dynamic main cards will be rendered here -->
+    </nav>
+
+    <!-- Sub Projects Grid (5 icons) -->
+    <nav class="projects cards" id="project-cards" aria-label="작업물 및 리소스">
+      <!-- Dynamic sub project cards will be rendered here -->
+    </nav>
+  </main>
+
+  <!-- Modal Dialog -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-box" id="modal-box">
+      <div class="modal-top-row">
+        <h2 class="modal-title" id="modal-title">상세 정보</h2>
+        <button type="button" class="modal-close-btn" id="modal-close" aria-label="닫기">×</button>
+      </div>
+      <p class="modal-subtitle" id="modal-subtitle"></p>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-custom" id="modal-custom"></div>
+      <div class="modal-tags" id="modal-tags"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
