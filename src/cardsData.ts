@@ -259,8 +259,8 @@ export function getCardsData(lang: SupportedLang): CardItem[] {
     },
     {
       id: 'project-translator',
-      title: '언어 전환',
-      tooltip: '언어 전환',
+      title: '일본어',
+      tooltip: '일본어',
       href: '#translate',
       category: 'project',
       type: 'emoji',
