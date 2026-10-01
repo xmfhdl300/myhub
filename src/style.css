@@ -3771,5 +3771,37 @@ body.lights-off .ppt-grid-bullets {
     grid-template-columns: 1fr;
   }
 }
+/* ==========================================================================
+   Language Switch Toast Notification
+   ========================================================================== */
+.lang-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(20, 20, 22, 0.88);
+  color: #ffffff;
+  padding: 9px 20px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9999;
+}
 
+body.lights-off .lang-toast {
+  background: rgba(245, 245, 247, 0.92);
+  color: #141416;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
 
+.lang-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
