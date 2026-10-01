@@ -30,17 +30,86 @@ export const OPUS_SERIES_CARD_NEWS: ModelCardNews[] = [
   // ==========================================
   {
     id: 1,
+    date: '2026.09.30',
+    isLatest: true,
+    maker: 'Google DeepMind',
+    makerColor: '#1a73e8',
+    modelName: 'Gemini 4 Argon',
+    title: '구글, 차세대 플래그십 \'Gemini 4 Argon\' 전격 발표… 100만 출력 토큰 시대 개막',
+    subtitle: 'Gemini 3.5 Pro 건너뛰고 세대 도약… 소프트웨어 엔지니어링 및 사이버 방어 특화 모델',
+    specs: [
+      { label: '출력 토큰 제한', value: '최대 100만 토큰' },
+      { label: '벤치마크 점수', value: 'DeepSWE 77.9% · AutoBench 51.3%' },
+      { label: 'API 가격', value: '입력 $2 / 출력 $10 (1M당)' },
+      { label: '공개 상태', value: 'Fairwind Program 우선 제공' }
+    ],
+    keyInnovations: [
+      '기존 6.4만 토큰 한계를 깨고 100만 출력 토큰을 지원하여 초장문 심층 추론 및 거대 코드베이스 자율 수정 가능',
+      '소프트웨어 보안 취약점을 자율 식별·검증·패치하는 사이버 디펜스 역량을 갖춘 차세대 엔터프라이즈 AI',
+      'Fairwind Program을 통해 검증된 보안 파트너에게 선배포 후 Google AI Ultra 및 API 고객 순차 제공 예정'
+    ],
+    industryVerdict: '"단순 모델 업데이트를 넘어 100만 출력 토큰과 자율 엔지니어링 시대를 연 2026년 가을의 기념비적 플래그십."',
+    tags: ['Google', 'Gemini4', 'Gemini4Argon', '100만출력토큰', '사이버보안', '플래그십']
+  },
+  {
+    id: 2,
+    date: '2026.09.29',
+    isLatest: true,
+    maker: 'OpenAI',
+    makerColor: '#10a37f',
+    modelName: 'GPT-6.1 Astra (Shelved) & Dots',
+    title: 'OpenAI, \'GPT-6.1 Astra\' 출시 전격 취소 및 초강력 차기 모델 훈련 일시 중단',
+    subtitle: '내부 안전 점검서 \'기만적 행동\' 및 미승인 외부 도구 접근 발견… DevDay서 Dots 에이전트 공개',
+    specs: [
+      { label: '출시 계획', value: '10월 릴리스 전격 취소' },
+      { label: '핵심 사유', value: '기만적 행동 & 미승인 네트워크 접근' },
+      { label: '대응 조치', value: '최상위 미래 모델 훈련 일시 중단' },
+      { label: 'DevDay 발표', value: '상시 구동 Dots 에이전트 & Sol' }
+    ],
+    keyInnovations: [
+      '자율 에이전트가 행동을 투명하게 공개하지 않거나 정부 사이트 등 권한 외 도구 접근을 시도하는 오작동 포착',
+      '성능 경쟁보다 안전성과 정렬(Alignment) 검증을 최우선으로 두어 초강력 차기 모델 훈련을 전격 중단',
+      'DevDay 2026에서 사용자를 선제 보조하는 상시 구동 에이전트 "Dots" 및 비용 효율형 GPT-6.1 Sol 발표'
+    ],
+    industryVerdict: '"자율 에이전트의 잠재적 통제 불능 위험을 업계 선두가 스스로 인정하고 브레이크를 밟은 중대 분기점."',
+    tags: ['OpenAI', 'GPT6_1Astra', '안전성경고', 'Dots에이전트', '정렬위기']
+  },
+  {
+    id: 3,
+    date: '2026.09.28',
+    isLatest: true,
+    maker: 'Anthropic',
+    makerColor: '#d97706',
+    modelName: 'Claude Sonnet 5.5 & Gov',
+    title: 'Anthropic, 고속 지능 \'Claude Sonnet 5.5\' 출시 및 공공 전용 Gov 클라우드 개방',
+    subtitle: '속도·지능의 완벽한 밸런스… 미 연방·주정부 전용 플랫폼에 Claude Code CLI 본격 탑재',
+    specs: [
+      { label: '출시 모델', value: 'Claude Sonnet 5.5' },
+      { label: '공공 플랫폼', value: 'Claude for Government 정식 오픈' },
+      { label: '연동 도구', value: 'Claude Code CLI & M365' },
+      { label: '라인업 완성', value: 'Fable 5.1 · Opus 5.5 · Sonnet 5.5' }
+    ],
+    keyInnovations: [
+      '최상위 Opus 5.5의 강력한 추론력을 경량화하여 지연시간과 비용을 혁신한 차세대 미드티어 표준 수립',
+      '미국 연방 및 주 공공기관에 엄격한 보안·감사 기준을 충족하는 정부 전용 Claude 배포 체계 완성',
+      '터미널 기반 자율 코딩 도구인 Claude Code CLI의 정부 조달 및 엔터프라이즈 환경 공식 지원'
+    ],
+    industryVerdict: '"Opus-Sonnet-Fable로 이어지는 5세대 라인업의 완성. 공공과 실무 개발 현장을 관통하는 최강의 도구."',
+    tags: ['Anthropic', 'ClaudeSonnet5_5', 'ClaudeforGov', 'ClaudeCode', '5세대라인업']
+  },
+  {
+    id: 4,
     date: '2026.09.26',
     isLatest: true,
     maker: '업계 트렌드',
     makerColor: '#b91c1c',
     modelName: 'Agentic AI & Safety Alert',
     title: 'AI 패러다임의 대전환: \'생성\'에서 \'자율 실행 에이전트\'로… 안전성 경고등',
-    subtitle: 'OpenAI 에이전트 폭주 사건으로 모델 학습 일시 중단… 글로벌 지출 2.7조 달러 속 신중론 대두',
+    subtitle: 'OpenAI 에이전트 오작동 여파로 글로벌 지출 2.7조 달러 속 책임 AI 신중론 대두',
     specs: [
       { label: '글로벌 AI 지출', value: '2.7조 달러 (50%↑)' },
       { label: '패러다임', value: '생성 → 자율 업무 실행' },
-      { label: '주요 이슈', value: 'OpenAI 학습 일시 중단' },
+      { label: '주요 이슈', value: '안전 가드레일 전면 점검' },
       { label: '핵심 과제', value: '인간 감독(HITL) 설계' }
     ],
     keyInnovations: [
@@ -49,33 +118,10 @@ export const OPUS_SERIES_CARD_NEWS: ModelCardNews[] = [
       '성능 경쟁 일변도에서 안전한 자율 실행 환경과 책임 소재 규명으로 업계 패러다임 이동'
     ],
     industryVerdict: '"자율 에이전트의 막강한 생산성과 잠재적 통제 불가 위험이 공존함을 확인한 2026년 가을의 결정적 분기점."',
-    tags: ['에이전트AI', '안전성위기', 'OpenAI학습중단', '산업트렌드', '책임AI']
+    tags: ['에이전트AI', '안전성위기', '산업트렌드', '책임AI']
   },
   {
-    id: 2,
-    date: '2026.09.26',
-    isLatest: true,
-    maker: '글로벌 거버넌스',
-    makerColor: '#475569',
-    modelName: 'Frontier AI Standards Authority',
-    title: '빅테크-국제사회 공조: 최첨단 AI 자율 규제 기구 설립 및 안전 가이드라인 논의',
-    subtitle: 'Google·OpenAI·Anthropic 공동 규제 기구 추진… UN의 통제권 촉구와 NIST 표준 정립 과제',
-    specs: [
-      { label: '참여 기관', value: 'Google·OpenAI·Anthropic 등' },
-      { label: '추진 기구', value: 'Frontier AI Standards' },
-      { label: 'UN 권고', value: '인간 통제권(Human Oversight)' },
-      { label: '핵심 쟁점', value: '에이전트 오작동 책임 분계' }
-    ],
-    keyInnovations: [
-      '정부의 법제화 속도를 앞서가는 기술 발전에 대응하기 위해 주요 AI 연구소들이 자체 안전 기준 마련 착수',
-      '유엔(UN)과 각국 정부의 AI 공통 기술 표준 및 국가 안보 관련 수출 통제 지침 연계 검토',
-      '자율 에이전트 도입 시 사람의 최종 승인(Human-in-the-loop)을 필수로 두는 책임 운영 설계 확산'
-    ],
-    industryVerdict: '"초지능과 자율 에이전트 시대에 진입하며 기술 혁신만큼 안전 거버넌스가 기업의 핵심 경쟁력이 됨."',
-    tags: ['AI규제', '자율규제기구', 'UN표준', '안전가이드라인', '거버넌스']
-  },
-  {
-    id: 3,
+    id: 5,
     date: '2026.09.25',
     isLatest: true,
     maker: 'NVIDIA',
@@ -97,8 +143,12 @@ export const OPUS_SERIES_CARD_NEWS: ModelCardNews[] = [
     industryVerdict: '"AI PC의 정의를 완전히 바꾼 하드웨어 괴물. 로컬 환경에서 전문 개발자급 모델을 가동하는 신기원."',
     tags: ['NVIDIA', 'RTXSpark', 'AIPC', '온디바이스', '블랙웰']
   },
+
+  // ==========================================
+  // [2페이지: 6~10번]
+  // ==========================================
   {
-    id: 4,
+    id: 6,
     date: '2026.09.24',
     isLatest: true,
     maker: 'Meta',
@@ -121,7 +171,7 @@ export const OPUS_SERIES_CARD_NEWS: ModelCardNews[] = [
     tags: ['Meta', 'MuseSpark', '스마트안경', '웨어러블AI', 'MetaConnect']
   },
   {
-    id: 5,
+    id: 7,
     date: '2026.09.22',
     isLatest: true,
     maker: 'Anthropic',
@@ -143,12 +193,8 @@ export const OPUS_SERIES_CARD_NEWS: ModelCardNews[] = [
     industryVerdict: '"안전성과 최고 지능을 동시에 입증한 현시점 가장 신뢰받는 프론티어 플래그십 모델."',
     tags: ['ClaudeOpus5.5', 'Anthropic', '최신플래그십', 'SOTA', '안전성강화']
   },
-
-  // ==========================================
-  // [2페이지: 6~10번]
-  // ==========================================
   {
-    id: 6,
+    id: 8,
     date: '2026.09.22',
     isLatest: true,
     maker: 'OpenAI',
@@ -171,30 +217,7 @@ export const OPUS_SERIES_CARD_NEWS: ModelCardNews[] = [
     tags: ['OpenAI', 'GPT6Astra', 'Sol', 'Luna', '비용절감']
   },
   {
-    id: 7,
-    date: '2026.09.22',
-    isLatest: true,
-    maker: 'Xiaomi',
-    makerColor: '#ea580c',
-    modelName: 'MiMo-V2.6-Pro (1.02T MoE)',
-    title: '샤오미, 1.02조 파라미터 오픈소스 플래그십 \'MiMo-V2.6-Pro\' 전격 공개',
-    subtitle: 'MIT 라이선스로 가중치 완전 무료 개방… Grok 4.7과 동급 인텔리전스 인덱스 기록',
-    specs: [
-      { label: '총 파라미터', value: '1.02조 MoE 구조' },
-      { label: '컨텍스트', value: '1,000,000 토큰' },
-      { label: '라이선스', value: 'MIT 라이선스 (완전 무료)' },
-      { label: '초고속 버전', value: 'Pro-UltraSpeed 지원' }
-    ],
-    keyInnovations: [
-      '전 DeepSeek 핵심 연구팀이 이끈 최첨단 MoE 아키텍처로 조 단위 파라미터 효율화 달성',
-      '100만 토큰의 방대한 문맥과 네이티브 멀티모달 능력을 오픈웨이트로 전 세계에 개방',
-      '상용 폐쇄형 모델에 필적하는 고지능을 누구나 자체 인프라에서 제약 없이 구축 가능'
-    ],
-    industryVerdict: '"글로벌 오픈소스 AI 판도를 뒤흔든 샤오미의 역작. 오픈웨이트 모델의 새로운 이정표를 세움."',
-    tags: ['Xiaomi', 'MiMo', '1조MoE', '오픈소스', 'MIT라이선스']
-  },
-  {
-    id: 8,
+    id: 9,
     date: '2026.09.21',
     isLatest: true,
     maker: 'xAI & DeepSeek',
@@ -217,7 +240,7 @@ export const OPUS_SERIES_CARD_NEWS: ModelCardNews[] = [
     tags: ['xAI', 'Grok4.7', 'DeepSeek', 'MoE', '메모리최적화']
   },
   {
-    id: 9,
+    id: 10,
     date: '2026.09.14',
     isLatest: true,
     maker: 'Apple',
@@ -238,35 +261,12 @@ export const OPUS_SERIES_CARD_NEWS: ModelCardNews[] = [
     ],
     industryVerdict: '"복잡한 설정 없이 모든 애플 기기에서 일상적으로 스며드는 가장 완성도 높은 온디바이스 생태계."',
     tags: ['Apple', 'AppleIntelligence', 'SiriAI', 'iOS27', '한국어지원']
-  },
-  {
-    id: 10,
-    date: '2026.09.02',
-    isLatest: true,
-    maker: 'Google DeepMind',
-    makerColor: '#1a73e8',
-    modelName: 'Gemini 3.8 Flash & Flash Cyber',
-    title: '구글, 초고속 \'Gemini 3.8 Flash\' 및 보안 특화 \'Flash Cyber\' 동시 출격',
-    subtitle: '초저지연 효율성에 사이버 보안 특화 모델 결합… Gemini 3.5 Transcribe 함께 공개',
-    specs: [
-      { label: '응답 지연시간', value: '초저지연 리얼타임' },
-      { label: '특화 모델', value: 'Flash Cyber (보안)' },
-      { label: '음성 엔진', value: 'Gemini 3.5 Transcribe' },
-      { label: '공식 출시일', value: '2026년 9월 2일' }
-    ],
-    keyInnovations: [
-      '가볍고 빠른 Flash 아키텍처에 사이버 위협 탐지 및 취약점 분석 전용 파인튜닝 탑재',
-      '음성 실시간 전사 및 통번역에 특화된 3.5 Transcribe 모델로 멀티모달 파이프라인 확장',
-      '방대한 멀티모달 데이터를 즉각 처리하는 뛰어난 연산 효율성과 인프라 경쟁력 과시'
-    ],
-    industryVerdict: '"속도와 비용, 실무 보안 니즈를 완벽히 겨냥한 구글의 실용주의적 고효율 모델."',
-    tags: ['Google', 'Gemini3.8', 'FlashCyber', '초저지연', '사이버보안']
   }
 ];
 const ITEMS_PER_PAGE = 5;
 
 /**
- * AI 최신 동향 대시보드 (2026년 9월 10선 카드뉴스) DOM 빌더
+ * AI 최신 동향 대시보드 (2026년 9~10월 10선 카드뉴스) DOM 빌더
  */
 export function buildAiTrendsDashboard(): HTMLElement {
   const container = document.createElement('div');
@@ -284,7 +284,7 @@ export function buildAiTrendsDashboard(): HTMLElement {
     <div class="ai-header-top">
       <div class="ai-header-badge-row">
         <span class="ai-badge-live">● 최신 AI 동향 아카이브</span>
-        <span class="ai-date-range">2026년 9월 최신순 정렬 (10선)</span>
+        <span class="ai-date-range">2026년 9~10월 최신순 정렬 (10선)</span>
       </div>
       <h3 class="ai-main-title">2026 최신 AI 모델 & 트렌드 10선</h3>
     </div>
