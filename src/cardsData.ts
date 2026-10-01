@@ -129,12 +129,12 @@ export const cardsData: CardItem[] = [
     }
   },
   {
-    id: 'project-business',
-    title: '',
-    tooltip: '',
-    href: '#business',
+    id: 'project-translator',
+    title: '번역기',
+    tooltip: '번역기',
+    href: '#translate',
     category: 'project',
     type: 'emoji',
-    iconContent: '💼'
+    iconContent: '🌐'
   }
 ];
