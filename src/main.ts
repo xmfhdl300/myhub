@@ -134,13 +134,23 @@ function showLanguageToast(message: string) {
   }, 1800);
 }
 
-// 언어 전환(한국어 ↔ 일본어) 토글 함수
+// 언어 전환(한국어 → 일본어 → 영어 → 한국어) 3단 순환 토글 함수
 function toggleLanguage() {
-  currentLang = currentLang === 'ko' ? 'ja' : 'ko';
+  const langOrder: Record<SupportedLang, SupportedLang> = {
+    ko: 'ja',
+    ja: 'en',
+    en: 'ko'
+  };
+  currentLang = langOrder[currentLang];
   document.documentElement.lang = currentLang;
 
   // 1. 웹 브라우저 탭 타이틀 & 서브 문구
-  document.title = currentLang === 'ko' ? 'myhub · 포트폴리오 & 채널' : 'myhub · ポートフォリオ & チャンネル';
+  const siteTitles: Record<SupportedLang, string> = {
+    ko: 'myhub · 포트폴리오 & 채널',
+    ja: 'myhub · ポートフォリオ & チャンネル',
+    en: 'myhub · Portfolio & Channels'
+  };
+  document.title = siteTitles[currentLang];
   if (siteSub) {
     siteSub.textContent = siteConfigByLang[currentLang].koreanName;
   }
@@ -148,22 +158,41 @@ function toggleLanguage() {
   // 2. 상단 백열등 툴팁 & 접근성 라벨
   const lampBulb = document.getElementById('lamp-bulb');
   if (lampBulb) {
-    const lampText = currentLang === 'ko' ? '백열등 (클릭하여 켜기/끄기)' : '白熱電球 (クリックして点灯/消灯)';
-    lampBulb.setAttribute('aria-label', lampText);
-    lampBulb.setAttribute('title', lampText);
+    const lampTexts: Record<SupportedLang, string> = {
+      ko: '백열등 (클릭하여 켜기/끄기)',
+      ja: '白熱電球 (クリックして点灯/消灯)',
+      en: 'Hanging Lamp (Click to turn On/Off)'
+    };
+    lampBulb.setAttribute('aria-label', lampTexts[currentLang]);
+    lampBulb.setAttribute('title', lampTexts[currentLang]);
   }
 
   // 3. 모달 닫기 버튼 라벨
   if (modalClose) {
-    modalClose.setAttribute('aria-label', currentLang === 'ko' ? '닫기' : '閉じる');
+    const closeTexts: Record<SupportedLang, string> = {
+      ko: '닫기',
+      ja: '閉じる',
+      en: 'Close'
+    };
+    modalClose.setAttribute('aria-label', closeTexts[currentLang]);
   }
 
   // 4. 네비게이션 접근성 라벨
   if (mainCardsNav) {
-    mainCardsNav.setAttribute('aria-label', currentLang === 'ko' ? '주요 프로젝트 및 채널' : '主要プロジェクト＆チャンネル');
+    const mainNavTexts: Record<SupportedLang, string> = {
+      ko: '주요 프로젝트 및 채널',
+      ja: '主要プロジェクト＆チャンネル',
+      en: 'Core Projects & Channels'
+    };
+    mainCardsNav.setAttribute('aria-label', mainNavTexts[currentLang]);
   }
   if (projectCardsNav) {
-    projectCardsNav.setAttribute('aria-label', currentLang === 'ko' ? '작업물 및 리소스' : '成果物＆リソース');
+    const projectNavTexts: Record<SupportedLang, string> = {
+      ko: '작업물 및 리소스',
+      ja: '成果物＆リソース',
+      en: 'Works & Resources'
+    };
+    projectCardsNav.setAttribute('aria-label', projectNavTexts[currentLang]);
   }
 
   // 5. 카드 목록 재렌더링
@@ -179,7 +208,12 @@ function toggleLanguage() {
   }
 
   // 7. 토스트 피드백 표시
-  showLanguageToast(currentLang === 'ja' ? '🌐 日本語に切り替えました' : '🇰🇷 한국어로 전환되었습니다');
+  const toastMessages: Record<SupportedLang, string> = {
+    ko: '🇰🇷 한국어로 전환되었습니다',
+    ja: '🇯🇵 日本語に切り替えました',
+    en: '🇺🇸 Switched to English'
+  };
+  showLanguageToast(toastMessages[currentLang]);
 }
 
 // 카드 렌더링 함수 (DOM API 안전 생성)

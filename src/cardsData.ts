@@ -1,4 +1,4 @@
-export type SupportedLang = 'ko' | 'ja';
+export type SupportedLang = 'ko' | 'ja' | 'en';
 
 export interface CardItem {
   id: string;
@@ -31,6 +31,11 @@ export const siteConfigByLang: Record<SupportedLang, { title: string; koreanName
     title: 'myhub',
     koreanName: 'AI活用ポートフォリオ＆自己紹介書',
     description: '主要プロジェクトとソーシャルチャンネルを一箇所にまとめます。'
+  },
+  en: {
+    title: 'myhub',
+    koreanName: 'AI-Powered Portfolio & Resume',
+    description: 'A curated showcase of core projects, career journey, and tech insights.'
   }
 };
 
@@ -139,6 +144,123 @@ export function getCardsData(lang: SupportedLang): CardItem[] {
           subtitle: '2026年9~10月 関税・サプライチェーン・海運・輸出入主要動向10選',
           description: '韓国9月過去最大輸出(1,209億$), 米中30-for-30関税協定, 韓-ASEAN FTA第2次改善など',
           tags: ['韓国輸出過去最大', '米中30for30', '韓ASEAN_FTA', '半導体スーパーサイクル', 'サプライチェーン安保']
+        }
+      },
+      {
+        id: 'project-translator',
+        title: 'English',
+        tooltip: 'English',
+        href: '#translate',
+        category: 'project',
+        type: 'emoji',
+        iconContent: '🌐'
+      }
+    ];
+  }
+
+  if (lang === 'en') {
+    return [
+      // 1. Core Channels (3x3 Grid: 3, 6, 9)
+      {
+        id: 'profile',
+        title: 'Profile',
+        centerLabel: 'profile',
+        tooltip: '[01] Profile (Park Jung Jae)',
+        href: '#profile',
+        category: 'main',
+        slot: 3,
+        displayNumber: '01',
+        type: 'emoji',
+        iconContent: '👤',
+        modalDetail: {
+          title: 'Park Jung Jae',
+          subtitle: '2001.05.11 · Chungwoon Univ. Chemical Engineering · Sales & Inventory',
+          description: `🎓 Education
+• Chungwoon University (Incheon) B.S. in Chemical Engineering
+
+💼 Career & Military Service
+• HighTech SC | Sales & Inventory Operations (2025.08 ~ 2026.02)
+• ROK Air Force (Sergeant Discharged) · Aviation Ammo Inventory & Chemical Inspection
+
+🗣️ Languages
+• TOEIC 655
+• OPIC IM1
+• JLPT N2
+
+📜 Licenses & Certifications
+• Certified Trade Specialist (Trade English Level 1)
+• Class 1 Driver's License
+
+🏆 Honors & Patents
+• Communication Design International Competition (Special Prize)
+• Patent Application: Surface Metal Cleaning Agent`
+        }
+      },
+      {
+        id: 'ppt',
+        title: 'PPT',
+        centerLabel: 'ppt',
+        tooltip: '[02] PPT (Moisturizing Cream Market & Product Competitiveness Analysis)',
+        href: '#ppt',
+        category: 'main',
+        slot: 6,
+        displayNumber: '02',
+        type: 'emoji',
+        iconContent: '📽️',
+        modalDetail: {
+          title: 'Moisturizing Cream Market & Product Competitiveness Analysis',
+          subtitle: 'Market Trends · Feature Breakdown · Competitor Benchmarking (7 Slides)',
+          description: 'The presentation data above is mock demonstration data for illustration purposes.',
+          tags: ['MoisturizingCream', 'MarketTrends', 'FeatureAnalysis', 'Benchmarking', 'Positioning']
+        }
+      },
+      {
+        id: 'excel',
+        title: 'Excel',
+        centerLabel: 'excel',
+        tooltip: '[03] Excel (Performance & Inventory by Material Category)',
+        href: '#excel',
+        category: 'main',
+        slot: 9,
+        displayNumber: '03',
+        type: 'emoji',
+        iconContent: '📊',
+        modalDetail: {
+          title: 'Excel · Performance & Inventory Analysis',
+          subtitle: 'Mirae Materials Tech · March 2026 Material Category Performance Report',
+          description: 'The spreadsheet data above is mock demonstration data for illustration purposes.'
+        }
+      },
+
+      // 2. Sub Projects (AI, Trade, Translator)
+      {
+        id: 'project-chatgpt',
+        title: 'AI Trends',
+        tooltip: 'Latest AI Trends (Top 10 Frontier Models Sept–Oct 2026)',
+        href: '#ai',
+        category: 'project',
+        type: 'svg',
+        iconContent: OPENAI_SVG,
+        modalDetail: {
+          title: 'AI Frontier Trends · Latest Model Card News',
+          subtitle: 'Top 10 Frontier AI Models & Industry Breakthroughs (Sept–Oct 2026)',
+          description: 'Gemini 4 Argon, GPT-6.1 Astra issue, Claude Sonnet 5.5 & Gov, RTX Spark and more',
+          tags: ['Gemini4Argon', 'GPT6_1Astra', 'ClaudeSonnet5.5', 'AgenticAI', 'NVIDIA_Spark']
+        }
+      },
+      {
+        id: 'project-trade',
+        title: 'Trade Trends',
+        tooltip: 'Global Trade Insights (Top 10 Supply Chain & Export News Sept–Oct 2026)',
+        href: '#trade',
+        category: 'project',
+        type: 'emoji',
+        iconContent: '✈️',
+        modalDetail: {
+          title: 'Global Trade Insights · Trade News Hub',
+          subtitle: 'Top 10 Global Supply Chain, Tariff, and Export Trends (Sept–Oct 2026)',
+          description: 'Korea Sept record export ($120.9B), US-China 30-for-30 tariff agreement, Korea-ASEAN FTA upgrade',
+          tags: ['KoreaRecordExport', 'USChina30for30', 'KoreaASEAN_FTA', 'SemiconductorSupercycle', 'SupplyChainSecurity']
         }
       },
       {
