@@ -418,7 +418,7 @@ export function buildExcelDashboard(): HTMLElement {
         <strong>가상의_소재회사_실적_및_재고분석.xlsx</strong>
       </div>
     </div>
-    <a href="/가상의_소재회사_실적_및_재고분석.xlsx" download="가상의_소재회사_실적_및_재고분석.xlsx" class="excel-download-btn">
+    <a href="./가상의_소재회사_실적_및_재고분석.xlsx" download="가상의_소재회사_실적_및_재고분석.xlsx" class="excel-download-btn">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
         <polyline points="7 10 12 15 17 10"></polyline>

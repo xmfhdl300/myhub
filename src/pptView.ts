@@ -22,7 +22,7 @@ export const MOISTURE_CREAM_SLIDES: SlideMeta[] = [
     slideNumber: 1,
     title: '수분크림 시장 및 제품 경쟁력 분석',
     category: 'COVER',
-    imageSrc: '/ppt_slides/slide1.png',
+    imageSrc: './ppt_slides/slide1.png',
     headline: '보습 기능을 넘어, "수분 지속 + 피부 장벽 + 사용감"이 경쟁 포인트로 이동',
     summary: '2026 수분크림 시장 동향 분석, 소비자 니즈 도출 및 가상 신제품(Hydra Barrier Cream) 기획과 타사 대조군 비교 분석 제안서.',
     highlights: [
@@ -36,7 +36,7 @@ export const MOISTURE_CREAM_SLIDES: SlideMeta[] = [
     slideNumber: 2,
     title: '시장 동향 | 보습은 기본, 장벽 · 저자극이 경쟁축',
     category: '01 MARKET TREND',
-    imageSrc: '/ppt_slides/slide2.png',
+    imageSrc: './ppt_slides/slide2.png',
     headline: '글로벌 모이스처라이저 시장 $10.6B → $13.5B(2030E, CAGR 4.1%) 성장',
     summary: '글로벌 모이스처라이저 시장은 지속 성장 중이며, 단순 보습을 넘어 장벽 케어와 민감성 저자극 포지셔닝으로 메시지가 고도화되고 있습니다.',
     highlights: [
@@ -50,7 +50,7 @@ export const MOISTURE_CREAM_SLIDES: SlideMeta[] = [
     slideNumber: 3,
     title: '소비자 니즈 | 가볍지만 오래가는 보습',
     category: '02 CONSUMER NEEDS',
-    imageSrc: '/ppt_slides/slide3.png',
+    imageSrc: './ppt_slides/slide3.png',
     headline: '제품 선택 기준이 단순 "촉촉함"에서 효능 · 사용감 · 신뢰의 조합으로 이동',
     summary: '기본 보습(Basic Hydration)에서 수분공급 + 장벽보완 + 저자극 + 산뜻한 사용감의 멀티 베네핏(Multi-Benefit)으로 소비자 요구가 진화했습니다.',
     highlights: [
@@ -65,7 +65,7 @@ export const MOISTURE_CREAM_SLIDES: SlideMeta[] = [
     slideNumber: 4,
     title: '제품 컨셉 | Hydra Barrier Cream',
     category: '03 PRODUCT CONCEPT',
-    imageSrc: '/ppt_slides/slide4.png',
+    imageSrc: './ppt_slides/slide4.png',
     headline: '"끈적임은 낮추고, 수분 지속과 장벽 보완은 강화"',
     summary: '속건조를 느끼는 20-30대 복합성·민감성 피부를 타깃으로 한 수분·장벽 균형형 80mL 프레시 젤-크림 신제품 기획안.',
     highlights: [
@@ -80,7 +80,7 @@ export const MOISTURE_CREAM_SLIDES: SlideMeta[] = [
     slideNumber: 5,
     title: '제품 특징 | 3단계 보습 구조',
     category: '04 PRODUCT FEATURES',
-    imageSrc: '/ppt_slides/slide5.png',
+    imageSrc: './ppt_slides/slide5.png',
     headline: '"채우고 - 잡고 - 지키는" 3단계 직관적 보습 메커니즘',
     summary: '복잡한 기능 나열 대신 소비자가 한 줄로 즉각 이해할 수 있는 3-Step 보습 프로세스(수분 채우기 → 수분 붙잡기 → 장벽 지키기) 설계.',
     highlights: [
@@ -95,7 +95,7 @@ export const MOISTURE_CREAM_SLIDES: SlideMeta[] = [
     slideNumber: 6,
     title: '경쟁 제품 비교 | 수분 · 진정 · 장벽 축으로 차별화',
     category: '05 COMPETITOR SET',
-    imageSrc: '/ppt_slides/slide6.png',
+    imageSrc: './ppt_slides/slide6.png',
     headline: '시중 대표 3대 브랜드(닥터지 · 토리든 · 라운드랩)와의 정밀 스펙 비교',
     summary: '대표 수분크림군의 공식 성분·제품 설명을 기준으로 핵심 효능, 성분, 제형, 용량, 포지셔닝을 다각도로 비교 분석.',
     highlights: [
@@ -110,7 +110,7 @@ export const MOISTURE_CREAM_SLIDES: SlideMeta[] = [
     slideNumber: 7,
     title: '포지셔닝 및 제안 | 수분감과 장벽 케어의 중간 지점',
     category: '06 POSITIONING',
-    imageSrc: '/ppt_slides/slide7.png',
+    imageSrc: './ppt_slides/slide7.png',
     headline: '2x2 매트릭스: "가벼운 사용감"과 "장벽 케어"의 미개척 블루오션 선점',
     summary: '경쟁 제품의 공식 설명과 제형 특성을 분석하여 가벼운 사용감과 높은 장벽 케어 효능을 동시에 만족하는 독보적 포지셔닝 도출.',
     highlights: [
@@ -158,7 +158,7 @@ export function buildPptDashboard(): HTMLElement {
           📑 전체 모아보기
         </button>
       </div>
-      <a href="/수분크림_시장_및_제품경쟁력_분석.pptx" download="차세대_수분크림_제품제안서_및_대조군비교.pptx" class="ppt-download-btn" title="원본 파워포인트 파일 다운로드">
+      <a href="./수분크림_시장_및_제품경쟁력_분석.pptx" download="차세대_수분크림_제품제안서_및_대조군비교.pptx" class="ppt-download-btn" title="원본 파워포인트 파일 다운로드">
         <span>💾 PPTX 다운로드</span>
       </a>
     </div>
