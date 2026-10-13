@@ -66,7 +66,6 @@ export function getCardsData(lang: SupportedLang): CardItem[] {
 • ハイテックSC | 営業および在庫管理 (2025.08 ~ 2026.02)
 
 🗣️ 語学
-• TOEIC 655
 • OPIC IM1
 • JLPT N2
 
@@ -183,7 +182,6 @@ export function getCardsData(lang: SupportedLang): CardItem[] {
 • ROK Air Force (Sergeant Discharged) · Aviation Ammo Inventory & Chemical Inspection
 
 🗣️ Languages
-• TOEIC 655
 • OPIC IM1
 • JLPT N2
 
@@ -299,7 +297,6 @@ export function getCardsData(lang: SupportedLang): CardItem[] {
 • 하이테크에스씨 | 영업 및 재고관리 (2025.08 ~ 2026.02)
 
 🗣️ 어학
-• TOEIC 655
 • OPIC IM1
 • JLPT N2
 
